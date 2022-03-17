@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your room</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+    <div class="myDiv">
+    
+        <div><h1 id= "countDown" onclick='changeText();'>5</h1></div>
+        <div><h3>
+            do you hide:
+        </h3></div>
+        <div></div>
+    </div>
+    
+
+    <div class="myDiv">
+        <div class="grid-item"><h3 onclick= 'window.location.href = "death3.html"'>under your bed</h3></div>
+
+        <div class="grid-item"><h3>OR</h3></div>
+
+        <div class="grid-item"><h3 onclick= 'window.location.href = "tenthpage.html"'> in the closet</h3></div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    console.log(window);
+    timer();
+
+function timer(){
+
+    if(document.getElementById("countDown").innerHTML == 0){
+        window.location.href = 'death.html'
+    }
+
+    setTimeout(function(){
+        changeText();
+        timer();
+    },1000);
+}
+
+
+
+    function changeText(){
+    value = document.getElementById("countDown").innerHTML;
+    console.log(value);
+
+    if (value == 0){
+    window.location.href = "https://www.google.com";
+    }
+    else{
+    newValue = (value - 1)
+    document.getElementById("countDown").innerHTML = newValue;
+    }
+}
+
+</script>

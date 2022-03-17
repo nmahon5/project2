@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>answer</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+
+</head>
+<body>
+    <div class="myDiv">
+        
+        <div><h1 id= "countDown" onclick='changeText();'>10</h1></div>
+        <div><h1>You answer the door</h1></div>
+        <div></div>
+        
+    </div>
+    
+    <img src='https://www.mygc.com.au/wp-content/uploads/2021/06/shutterstock_653169760.jpg'>
+    <h3>
+        the man asks to borrow a phone, do you:
+    </h3>
+
+    <div class="myDiv">
+        <div class="grid-item"><h3 onclick= 'window.location.href = "death1.html"'>let him in</h3></div>
+
+        <div class="grid-item"><h3>OR</h3></div>
+
+        <div class="grid-item"><h3 onclick= 'window.location.href = "sixthpage.html"'>close the door</h3></div>
+    </div>
+
+    <a href="fourthpage.html">next page</a>
+
+</body>
+</html>
+<script>
+    console.log(window);
+    timer();
+
+function timer(){
+
+    if(document.getElementById("countDown").innerHTML == 0){
+        window.location.href = 'death.html'
+    }
+
+    setTimeout(function(){
+        changeText();
+        timer();
+    },1000);
+}
+
+
+
+    function changeText(){
+    value = document.getElementById("countDown").innerHTML;
+    console.log(value);
+
+    if (value == 0){
+    window.location.href = "https://www.google.com";
+    }
+    else{
+    newValue = (value - 1)
+    document.getElementById("countDown").innerHTML = newValue;
+    }
+}
+
+</script>

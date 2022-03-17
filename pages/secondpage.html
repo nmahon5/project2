@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>things get weird</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script> src="../javascript.js" </script>
+</head>
+<body>
+
+    <div class="myDiv">
+        
+        <div><h1 id= "countDown" onclick='changeText();'>10</h1></div>
+        <div><h2>There's a knock at the front door</h2></div>
+        <div></div>
+        
+    </div>
+    
+
+    <div class="myDiv">
+
+        <div class="grid-item"></div>
+
+        <div class="grid-item"><img src='https://i.ytimg.com/vi/mEztDBW6zes/hqdefault.jpg'></div>
+    </div>
+
+    <p>A creepy man is at the door, do you:</p>
+
+    <div class="myDiv">
+        <div class="grid-item"><h3 onclick= 'window.location.href = "thirdpage.html"'>Answer</h3></div>
+
+        <div class="grid-item"><h3>OR</h3></div>
+
+        <div class="grid-item"><h3 onclick= 'window.location.href = "fourthpage.html"'>Hide</h3></div>
+    </div>
+
+    
+
+    <a href="thirdpage.html">next page</a>
+
+</body>
+</html>
+<script>
+console.log(window);
+    timer();
+
+
+function changeText(){
+    value = document.getElementById("countDown").innerHTML;
+    console.log(value);
+
+    if (value == 0){
+    window.location.href = "https://www.google.com";
+    }
+    else{
+    newValue = (value - 1)
+    document.getElementById("countDown").innerHTML = newValue;
+    }
+}
+
+function timer(){
+
+    if(document.getElementById("countDown").innerHTML == 0){
+        window.location.href = 'death.html'
+    }
+
+    setTimeout(function(){
+        changeText();
+        timer();
+    },1000);
+}
+
+</script>

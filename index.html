@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src = "javascript.js" ></script>
+
+    <title>beginning</title>
+</head>
+<body>
+    <div class="myDiv">
+    
+        <div><h1 id= "countDown" onclick='changeText();'>10</h1></div>
+        <div><h1>Home Alone</h1></div>
+        <div></div>
+    </div>
+    <div class="myDiv">
+
+        <div class="grid-item"><img src='https://s3.envato.com/files/190167209/590.jpg'></div>
+
+        <div class="grid-item"><p>It's late on a Friday evening, your parents have gone on a weekend 
+            getaway and left you home alone. Things have been going well, until…
+                </p></div>
+
+        
+</div>
+
+
+
+<a href="pages/secondpage.html">next page</a>
+
+
+</body>
+</html>
+<script>
+console.log(window);
+timer();
+
+function timer(){
+
+if(document.getElementById("countDown").innerHTML == 0){
+    window.location.href = 'pages/secondpage.html'
+}
+
+setTimeout(function(){
+    changeText();
+    timer();
+}, 1000);
+}
+</script>

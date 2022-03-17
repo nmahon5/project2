@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+    <div class="myDiv">
+    
+        <div><h1 id= "countDown" onclick='changeText();'>10</h1></div>
+        <div><h1>you hide from the door</h1></div>
+        <div></div>
+    </div>
+
+    
+    <img src='https://st3.depositphotos.com/16823926/19136/v/600/depositphotos_191368662-stock-video-male-aggressive-knocking-door-aggression.jpg'>
+    <p>the man is still there, trying to let himself in</p>
+    <img src='https://img.wattpad.com/9ca1b89a6f5dc8a7770cf79b29f004cdb110cb03/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4a462d3268544b2d7948327445673d3d2d313130333634373634382e313639336635326166386162636633343239353236393837323133342e676966'>
+    <h3>
+        do you go to:
+    </h3>
+
+    <div class="myDiv">
+        <div class="grid-item"><h3 onclick= 'window.location.href = "seventh.html"'>the kitchen</h3></div>
+
+        <div class="grid-item"><h3>OR</h3></div>
+
+        <div class="grid-item"><h3 onclick= 'window.location.href = "eighthpage.html"'>your room</h3></div>
+    </div>
+
+    
+
+<a href="sixthpage.html">next page</a>
+
+</body>
+</html>
+<script>
+    console.log(window);
+    timer();
+
+function timer(){
+
+    if(document.getElementById("countDown").innerHTML == 0){
+        window.location.href = 'death.html'
+    }
+
+    setTimeout(function(){
+        changeText();
+        timer();
+    },1000);
+}
+
+
+
+    function changeText(){
+    value = document.getElementById("countDown").innerHTML;
+    console.log(value);
+
+    if (value == 0){
+    window.location.href = "https://www.google.com";
+    }
+    else{
+    newValue = (value - 1)
+    document.getElementById("countDown").innerHTML = newValue;
+    }
+}
+
+</script>

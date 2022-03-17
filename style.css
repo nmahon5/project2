@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=PT+Sans&family=Roboto:wght@100&family=Shizuru&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+
+
+body{
+    background-color:black;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+img{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 5em;
+
+    text-align: center;
+
+    color:rgb(33, 47, 63);
+
+}
+
+h2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+
+    text-align: center;
+
+    color:rgb(33, 47, 63);
+
+}
+
+h3{
+    font-family: 'Amatic SC', cursive;
+    font-size: 3em;
+
+    text-align: center;
+
+    color:rgb(33, 47, 63);
+
+}
+
+h4{
+    font-family: 'Amatic SC', cursive;
+    font-size: 5em;
+
+    text-align: left;
+
+    color:rgb(33, 47, 63);
+}
+
+/* rgb(189, 183, 107) yellow color */
+
+.backgroundColor{
+    background-color: null;
+}
+
+p{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+
+    text-align: center;
+
+    color:rgb(33, 47, 63);
+}
+
+a{
+    font-family: 'Amatic SC', cursive;
+    color:rgb(33, 47, 63);
+    text-decoration: none;
+}
+
+
+.myDiv{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    text-align: center;
+  }
